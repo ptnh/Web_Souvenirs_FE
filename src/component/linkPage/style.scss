@@ -1,0 +1,59 @@
+@import "src/style/style.scss";
+
+.background{
+    z-index: -1;
+    width: 100%;
+    height: 80px;
+    /* text-align: center; */
+    position: relative;
+    margin-top: -550px;
+    margin-bottom: 130px;
+
+    .img-background{
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        // z-index: 0;
+    }
+
+    .content-link{
+        position: absolute;
+        top: 100%; /* Đặt phần trên cùng ở giữa theo chiều ngang */
+        left: 50%; /* Đặt phần trái cùng ở giữa theo chiều dọc */
+        transform: translate(-50%, -50%); 
+        width: 500px;
+        text-align: center;
+
+            .link-main{
+                color: white;
+                font-size: 42px;
+                font-weight: bold;
+            }
+            .link-detail{
+                display: flex;
+                color: white;
+                font-size: 24px;
+                width: 100%;
+                justify-content: center;
+                
+                    .link-first{
+                        z-index: 10;
+                        margin-right: 10px;
+                        color: white;
+                        text-decoration: none;
+
+                        &:hover{
+                            color: map-get($theme-colors, main-color);
+                        }
+                    }
+                    .icon-link{
+                        margin-right: 10px;
+                    }
+                    .link-second{
+                        color: map-get($theme-colors, main-color);
+                    }
+            }
+    }
+}
+
+

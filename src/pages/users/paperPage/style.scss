@@ -1,0 +1,42 @@
+@import "src/style/style.scss";
+.title-type-paper{
+    margin: 20px 60px;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        bottom: 0;
+        left: 58.8%;
+        height: 0px;
+        width: 1000px;
+        border: 1px solid rgb(194, 191, 191);
+        content: "";
+    }
+
+    .content-type-paper{
+        padding: 0px 10px;
+        background-color: map-get($theme-colors, main-color);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 40px;
+     
+    }
+}
+
+
+
+.list-papers{
+    margin: 10px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .area-paper{
+        flex: 0 0 calc(33.33% - 10px); /* Phần trăm chiều rộng, trừ đi khoảng cách giữa các phần tử */
+    }
+}

@@ -1,0 +1,208 @@
+/* css menu đỉnh rotayo ngang */
+/* component menu picture */
+@import "src/style/style.scss";
+.opop1{
+    display: flex;
+    position: absolute;
+    bottom: -80px;
+    left: calc(9%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rectangle {
+    width: 180px;
+    height: 165px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle img {
+    transition: transform 0.6s ease;
+}
+
+.rectangle:hover img.rotate-on-hover {
+    transform: rotateY(720deg);
+}
+
+.label {
+    color: black;
+}
+
+.rectangle:hover .label {
+    color: map-get($theme-colors, main-color);
+}
+.link_rectangle{
+    text-decoration: none;
+    text-align: center;
+}
+/* css cho thân  ------------------------ */
+
+.body-web{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 80px;
+}
+
+
+/* component show list mini product */
+.show-list-mini-product{
+    width: 870px;
+    /* display: flex; */
+    overflow: hidden;
+    /* overflow-x: auto; */
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.area-show-option{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    scroll-behavior: smooth; /* Cho hiệu ứng cuộn mượt */
+}
+
+/* component show mwnu mini */
+.component-mini-select{
+    /* margin-left: 100px; */
+    width: 830px;
+    /* border: 1px solid red; */
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid wheat;
+}
+
+.mini-right{
+    width: 67%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.title-mini-select{
+    width: 33%;
+    height: 40px;
+    background-color: map-get($theme-colors, main-color);
+    color: white;
+    font-weight: bold;
+    /* align-items: center; */
+    text-align: center;
+    line-height: 40px;
+    margin-right: 160px;
+}
+
+.mini-menu{
+    width: 90%;
+}
+
+.mini-menu a{
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+
+.mini-menu a:hover{
+    color: map-get($theme-colors, main-color);
+}
+/* .rectangle1::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid indianred;
+    border-left: 10px solid transparent;
+    border-right: 10px solid red;
+    border-bottom: 10px solid transparent;
+} */
+
+.repair-poisition{
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+.dis,.add{
+    border: none;
+    background-color: white;
+}
+
+.dis:hover, .add:hover{
+    color: map-get($theme-colors, main-color);
+}
+
+
+
+
+/* quảng cáo phòng */
+
+/* component quảng cáo ảnh */
+.room-advertisement{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.component-image-adverticer{
+    width: 550px;
+    height: 200px;
+    position: relative;
+    /* border-radius: 5px; */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.image-adverticer-menu{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    /* position: relative; */
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-adverticer-menu:hover{
+    transform: scale(1.2);
+    border-radius: none;
+    
+}
+
+.text-menu{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 35%;
+    /* width: 30%;
+    height: 20%; */
+    background-color: antiquewhite;
+    padding: 10px 20px;
+}
+.text-menu:hover{
+    color: map-get($theme-colors, main-color);
+}
+
+/* css sản phẩm hot */
+.hot-product{
+    width:90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content:space-between;
+}
+.show-hot-product-left{
+    width:71%;
+    overflow: hidden;
+}
+.show-hot-product-right{
+    width:28%;
+    height:auto;
+    /* border: 1px solid red;
+}
+.component-hot-advertiver{
+    width: 100%;
+    height: auto;
+    /* margin-right: 20px; */
+    border: 2px solid map-get($theme-colors, main-color);
+}

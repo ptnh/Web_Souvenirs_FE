@@ -1,0 +1,69 @@
+@import "src/style/style.scss";
+.section_account {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    position: relative;
+    .ui_account{
+        display: flex;
+        width: 350px;
+        align-items:  center;
+       
+        .account-user-avatar {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 12px;
+            cursor: pointer;
+        }
+        .account-user-name {
+            margin-left: 8px;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+       
+    }
+    &:hover {
+        .menu_account {
+            display: block;
+            z-index: 10;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        }
+    }
+    .menu_account {
+        // display: none; 
+        border: 1px solid #ccc;
+        width: 200px;
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: white;
+        transform: rotateX(90deg) rotateY(0deg) rotateZ(5deg); ; /* Đặt góc xoay ban đầu là 0 độ */
+        transform-origin: top; /* Đặt điểm quay ở phía trên */
+        transition: transform 0.5s ease; 
+        // color: black;
+        .sub_menu_account {
+           
+            .sub_menu_account_level_1{
+                padding: 10px;
+                border-bottom: 1px solid aqua;
+                &:last-child {
+                    /* CSS styles cho thẻ li cuối cùng */
+                    /* background-color: red; */
+                    border: none;
+                }
+                .sub-menu_info{
+                    color: black;
+                }
+                &:hover{
+                    .sub-menu_info{
+                        color: map-get($theme-colors, main-color);
+                    }
+                }
+            }
+        }
+        
+    }
+}

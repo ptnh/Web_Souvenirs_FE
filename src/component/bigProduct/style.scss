@@ -1,0 +1,116 @@
+@import "src/style/style.scss";
+
+.component-advertiver{
+    width: 28%;
+    height: auto;
+    border: 2px solid map-get($theme-colors, main-color);
+
+    .image-represent{
+        padding: 20px 0px;
+        margin: 0 auto;
+        width: 90%;
+        height: 300px;
+
+        .position-ticket{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background:white;
+
+            &:hover .hide{
+                display: block;
+                background: rgba(0, 0, 0, 0.5);
+                
+            }
+
+            .ticket{
+                color: white;
+                background-color: map-get($theme-colors, main-color);
+                padding: 3px 10px;
+                border-radius: 7px;
+                position: absolute;
+                z-index: 3;
+                top: 0;
+                right: 0;
+                }
+
+            .hide{
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 120%;
+                top: 0;
+                left: 0;
+                
+                .transform-buy{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 90%;
+                    margin-left: calc(50% - 40px);
+
+                    .btn-view-product{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                        color: black;
+                        background-color: white;
+                        border: none;
+                        margin-right: 5px;
+
+                        &:hover{
+                            color: white;
+                            background-color: map-get($theme-colors, main-color);
+                        }
+                    }
+
+                    .btn-view-more{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                        color: black;
+                        background-color: white;
+                        border: none;
+
+                        &:hover{
+                            color: white;
+                            background-color: map-get($theme-colors, main-color);
+                        }
+                    }
+                }
+            }
+        }
+        .ticket-image{
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+    }
+
+    .detail-info-represent{
+        text-align: center;
+        width: 100%;
+        margin: 50px auto;
+        
+        .name-product{
+            color: black;
+            padding: 15px 20px 0px 20px;
+        }
+        .type-product{
+            color: antiquewhite;
+            text-transform: uppercase;
+            padding: 15px 20px 0px 20px;
+        }
+        .price-product{
+            color: map-get($theme-colors, main-color);
+            font-weight: bold;
+            padding: 15px 20px 20px 20px;
+
+            .vnd{
+                text-decoration: underline;
+                color: map-get($theme-colors, main-color);
+                vertical-align: super;
+            }
+        }
+    }
+}

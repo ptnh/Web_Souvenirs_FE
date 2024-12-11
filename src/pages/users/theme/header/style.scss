@@ -1,0 +1,328 @@
+@import "src/style/style.scss";
+
+.header_first{
+    width: 90%;
+    height: 50px;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+/* css search */
+
+.component-search{
+    margin: 0 auto;
+    width: 500px;
+    height: 40px;
+    display: flex;
+}
+
+.input-content-search{
+    width: 80%;
+    border: 2px solid map-get($theme-colors, main-color);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 40px;
+    text-indent: 20px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.input-content-search:focus::placeholder {
+    color: map-get($theme-colors, main-color);
+}
+
+.input-content-search:focus {
+    border-color: map-get($theme-colors, main-color);
+    color: map-get($theme-colors, main-color);
+}
+
+.input-content-search:focus {
+    border-color: red;
+}
+
+.input-content-search {
+    transition: border-color 0.3s;
+}
+
+.search-button{
+    width: 20%;
+    height: 40px;
+    color: aliceblue;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    background-color: map-get($theme-colors, main-color);
+}
+.search-button:hover{
+    cursor: pointer;
+}
+/* css login */
+
+.component-login{
+    width: 200px;
+    height: 40px;
+    /* margin: 0 auto; */
+    text-align: center;
+    line-height: 40px; /* Canh giữa dọc */
+}
+
+.link-login{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 5px;
+    border-right: 2px solid map-get($theme-colors, main-color);
+}
+
+.link-singin{
+    margin-left: 5px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.link-login:hover, .link-singin:hover{
+    color: map-get($theme-colors, main-color);
+}
+
+
+/* ---------------- */
+.header_second{
+    width: 90%;
+    /* height: 50px; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+
+/* css menu cột */
+/* component catalog */
+.component-catalog{
+    width: 23%;
+    height: 600px;
+
+}
+
+.open-catalog{
+    display: flex;
+    /* justify-content: center; */
+    background: map-get($theme-colors, main-color);
+    padding: 10px 20px 0px 20px;
+    border-radius: 5px;
+    /* text-align: center; */
+
+    
+}
+
+.open-catalog .title-icon{
+    color: white;
+    // font-weight: bold;
+    font-size: 28px;
+    padding: 0;
+    
+    
+}
+
+.open-catalog .title-content{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 5px;
+    
+  
+}
+.option-catalog {
+    display: none;
+}
+  
+.option-catalog.visible {
+    display: block;
+  }
+.option-catalog{
+    background: white;
+    height: 300px;
+
+}
+
+.option-1{
+    display: flex;
+    padding: 10px 20px;
+}
+
+.option-icon{
+    color: map-get($theme-colors, main-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.option-content{
+    color: black;
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+.option-catalog.show {
+    display: block;
+}
+
+.option-1:hover{
+    background-color: map-get($theme-colors, main-color);
+}
+
+.option-1:hover .option-icon, .option-1:hover .option-content{
+    color: white;
+}
+
+
+/* css menu ngang */
+/* menu */
+.component-menu{
+    width: 640px;
+    /* height: 70px; */
+}
+
+.has-menu-level-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.has-menu-level-1 li{
+    width: 20%;
+    /* height: 50px; */
+    padding: 10px 0px;
+    /* background-color: aqua; */
+    margin: 0px 5px;
+    /* align-items: center; */
+    /* line-height: 50px; */
+    text-align: center;
+    list-style: none;
+    position: relative;
+}
+
+.has-menu-level-1 li a{
+    color: black;
+    /* font-weight: bold; */
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.has-menu-level-1 li span{
+    content: ""; /* Nội dung trống */
+    position: absolute;
+    bottom: 5px;
+    left: calc(35%);
+    width: 40px; /* Chiều rộng */
+    height: 3px; /* Chiều cao */
+    background-color: white; /* Màu nền của pseudo-element */
+    border-radius: 1px;
+    display: inline-block;
+    opacity: 0.0;
+ 
+}
+
+.has-menu-level-1 li:hover span, .has-menu-level-1 li:hover a{
+    color: map-get($theme-colors, main-color);
+    opacity: 1.0;
+    
+    /* border-bottom: 1px solid red; */
+}
+
+.has-menu-level-1 li:hover .sub-menu {
+    /* display: block; */
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+
+.sub-menu {
+    width: 200px;
+    /* display: none; */
+    position: absolute;
+    top: 100%; /* Hiển thị dưới menu cha */
+    left: 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 0px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(5deg); ; /* Đặt góc xoay ban đầu là 0 độ */
+            transform-origin: top; /* Đặt điểm quay ở phía trên */
+            transition: transform 0.5s ease; 
+}
+
+/* Thiết lập kiểu hiển thị và vị trí cho sub-menu level 1 */
+.sub-menu-level-1 {
+    list-style: none;
+    padding: 0;
+}
+
+.sub-menu-level-1 .sub-li {
+    width: 100%; /* Điều chỉnh chiều rộng */
+    padding: 15px 15px 15px 0px;
+    border-bottom: 1px solid map-get($theme-colors, main-color);
+}
+
+.sub-menu-level-1 .sub-li:last-child {
+    /* CSS styles cho thẻ li cuối cùng */
+    /* background-color: red; */
+    border: none;
+}
+
+.sub-menu-level-1 .sub-li .sub-a {
+    text-decoration: none;
+    text-transform: none;
+    color: #333;
+    display: block;
+    text-align: left;
+    align-items: center;
+}
+
+.sub-menu-level-1 .sub-li .sub-a:hover {
+    color: map-get($theme-colors, main-color);
+}
+/*  */
+/* component hotline */
+.component-hotline{
+    display: flex;
+    height: 65%;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-hot{
+    margin-left: 5px;
+    margin: auto;
+    font-size: 38px;
+    color: map-get($theme-colors, main-color);
+}
+
+.text{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.phone{
+    margin-left: 5px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    color: blue;
+    text-decoration: underline;
+}
+.phone:hover{
+    color: map-get($theme-colors, main-color);
+    text-decoration: none;
+}
+/* ------- */
+.size-img{
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+

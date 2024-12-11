@@ -1,0 +1,21 @@
+@import "src/style/style.scss";
+
+.are_btn_review_product{
+    margin:10px 0px;
+    text-align: center;
+
+    #btn_review_product{
+      background-color: white;
+      border: none;
+      font-size: 22px;
+      margin: 5px 15px;
+    }
+}
+
+.active {
+    color: map-get($theme-colors, main-color);
+}
+.area_review_product{
+    width: 1100px;
+    margin: 30px auto;;
+}

@@ -1,0 +1,223 @@
+@import "src/style/style.scss";
+/* component menu ngang dịch vụ */
+.service {
+    width: 100%;
+    height: 100px;
+    background-color: map-get($theme-colors, main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+    .service-driver {
+        display: flex;
+        align-items: center;
+
+        &:hover .icon-container {
+            transform: rotateY(360deg);
+        }
+
+        .icon-container {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease;
+
+            .icon-service {
+                width: 100%;
+                height: 100%;
+                color: white;
+                text-align: center;
+            }
+        }
+    
+        .detail-service {
+            text-align: left;
+            color: white;
+        
+            .title-service {
+                font-weight: bold;
+                margin: 5px 10px;
+            }
+
+            .content-service {
+                margin: 5px 10px;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+.sub-menu-select-first input[type="radio"] {
+    margin-right: 10px; /* Khoảng cách giữa radio button và chữ văn bản */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px; /* Kích thước radio button */
+    height: 16px;
+    border-radius: 50%; /* Để tạo dạng dấu tích */
+    border: 2px solid map-get($theme-colors, main-color); /* Màu viền dấu tích */
+}
+
+/* Tùy chỉnh dấu tích khi đã được chọn */
+.sub-menu-select-first input[type="radio"]:checked {
+    background-color: map-get($theme-colors, main-color); /* Màu nền dấu tích khi đã chọn */
+}
+
+
+/* css phần footer */
+.footer{
+    margin: 20px 00px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+
+    .component-info-shop{
+        width: 30%;
+
+        .logo-footer{
+            width: 50%;
+            height: 40%;
+
+            .image-logo-footer{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .name-shop{
+            margin: 5px 0px;
+            font-style: 22px;
+            font-weight: bold;
+        }
+
+        .address-shop{
+            margin: 5px 0px;
+        }
+        .phone-shop{
+            margin: 5px 0px;
+
+            span{
+                &:hover{
+                    color: map-get($theme-colors, main-color);
+                }
+            }
+        }
+        .email-shop{
+            margin: 5px 0px;
+
+            span{
+                &:hover{
+                    color: map-get($theme-colors, main-color);
+                }
+            }
+        }
+    }
+
+    .component-menu-footer{
+        width: 15%;
+
+        .title-menu-footer{
+            font-size: 20px;
+            font-weight: bold;
+            color: map-get($theme-colors, main-color);
+        }
+        .has-menu-footer{
+            list-style: none;
+
+            .li-has-menu-footer{
+                padding: 5px 0px;
+            }
+            .a-has-menu-footer {
+                text-decoration: none;
+                color: black;
+                transition: transform 0.3s ease;
+
+                
+            }
+        }
+    }
+}
+
+.a-has-menu-footer::before {
+    content: "\2713"; 
+    margin-right: 5px;
+    display: none;
+}
+
+.component-end-footer{
+    .title-end-footer{
+        font-size: 20px;
+        color: map-get($theme-colors, main-color);
+    }
+    .phone-end-footer{
+        margin: 10px;
+        display: flex;
+        font-weight: bold;
+        font-style: 22px;
+        color: black;
+
+        &:hover{
+            color: map-get($theme-colors, main-color);
+        }
+    }
+    .form-container-footer{
+        display: flex;
+        margin: 10px;
+
+        .input-signin {
+            transition: border-color 0.3s;
+        }
+                
+        .btn-sign-in{
+            margin-left: 10px;
+            background-color: map-get($theme-colors, main-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+    }
+}
+
+.a-has-menu-footer:hover::before, .a-has-menu-footer:hover {
+    display: inline-block;
+    color: map-get($theme-colors, main-color);
+    margin-left: 5px;
+}
+
+.phone-end-footer{
+    
+}
+.phone-end-footer
+
+input[type="text"] {
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+    outline: none; 
+    border-color: #3498db;
+}
+
+.input-signin:focus::placeholder {
+    color: map-get($theme-colors, main-color);
+}
+
+.input-signin:focus {
+    border-color: map-get($theme-colors, main-color);
+    color: map-get($theme-colors, main-color);
+}
+
+.input-signin:focus {
+    border-color: red;
+}
+
+

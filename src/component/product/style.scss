@@ -1,0 +1,117 @@
+@import "src/style/style.scss";
+
+/* component show product mini */
+.component-mini-advertiver-outstanding-products{
+    margin-top: 10px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    border: 2px solid map-get($theme-colors, main-color);
+    transition: transform 0.5s ease-in-out; /* Thời gian di chuyển và kiểu chuyển động */
+
+    .mini-image-represent{
+        padding: 10px 0px;
+        margin: 0 auto;
+        width: 90%;
+        height: 200px;
+
+        .mini-position-ticket{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background:white;
+
+            &:hover .mini-hide{
+                display: block;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .show-detail-product{
+                width: 50px;
+                height: 200px;
+
+                .mini-ticket-image{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    margin: 2;
+                }
+
+                
+            }
+        }
+    }
+
+    .mini-detail-info-represent{
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+
+        .mini-name-product{
+            color: black;
+            padding: 10px 20px 0px 20px;
+        }
+        
+        .mini-price-product{
+            color: map-get($theme-colors, main-color);
+            font-weight: bold;
+            padding: 10px 20px 10px 20px;
+
+            .mini-vnd{
+                text-decoration: underline;
+                color: map-get($theme-colors, main-color);
+                vertical-align: super;
+            }
+        }
+        
+        
+       
+    }
+}
+
+.mini-hide{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;  
+    
+    .mini-transform-buy{
+        display: flex;
+        align-items: center;
+        margin-top: 75%;
+        margin-left: calc(50% - 30px);
+
+        .mini-btn-view-product{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+            border: none;
+            margin-right: 5px;
+
+            &:hover{
+                color: white;
+                background-color: map-get($theme-colors, main-color);
+            }
+        }
+
+        .mini-btn-view-more{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            color: black;
+            background-color: white;
+            border: none;
+
+            &:hover{
+                color: white;
+                background-color: map-get($theme-colors, main-color);
+            }
+            
+        }
+    }
+}

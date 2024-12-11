@@ -1,0 +1,136 @@
+@import "src/style/style.scss";
+/* css giỏ hàng ------------------------ */
+.component-cart{
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+}
+.title-cart-client{
+    font-size: 32px;
+}
+.table-info-cart{
+    border: 2px solid  map-get($theme-colors, main-color);
+    border-bottom: 1px solid wheat;
+    margin-top: 10px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+tr{
+   height: 40px;
+   /* border-bottom: 2px solid  map-get($theme-colors, main-color) ; */
+}
+th{
+    border-bottom: 1px solid wheat ;
+}
+th, td {
+    padding: 15px;
+    }
+th:nth-child(1),td:nth-child(1){
+    width: 5%;
+    text-align: center;
+    /* border: 1px solid  map-get($theme-colors, main-color); */
+}
+th:nth-child(2),td:nth-child(2){
+    width: 20%;
+    height: 15%;
+    /* height: 20%; */
+    object-fit: cover;
+    text-align: center;
+    /* border: 1px solid  map-get($theme-colors, main-color); */
+}
+.th:nth-child(3),td:nth-child(3){
+    width: 35%;
+    text-align: left;
+    margin-left: 10px;
+    /* border: 1px solid  map-get($theme-colors, main-color); */
+}
+th:nth-child(4),td:nth-child(4){
+    width: 10%;
+    text-align: center;
+    /* border: 1px soli
+    d  map-get($theme-colors, main-color); */
+}
+.th:nth-child(5),td:nth-child(5){
+    width: 20%;
+    text-align: center;
+    display: flex;
+    margin: 35px;
+    align-items: center;
+    /* border: 1px solid  map-get($theme-colors, main-color); */
+}
+.th:nth-child(6),td:nth-child(6){
+    width: 30%;
+    text-align: center;
+    /* border: 1px solid  map-get($theme-colors, main-color); */
+}
+.custom-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 80px; /* Độ rộng của input */
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 16px; /* Kích thước chữ */
+    outline: none; /* Loại bỏ viền khi focus */
+}
+
+.custom-input:focus {
+    border: 1px solid #FF8C00; /* Màu viền khi input được focus */
+}
+
+.vnd{
+    text-decoration: underline;
+    color: black;
+    vertical-align: super;
+}
+.image-picture-product{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.btn-x{
+    border: none;
+    background-color: white;
+    color: #333;
+    font-size: 20px;
+}
+/* /css thanh toán */
+.sum-money-bought-product{
+    height: auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border: 2px solid  map-get($theme-colors, main-color);
+    border-top: 0px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.money-bought{
+    font-size: 24px;
+    color:  map-get($theme-colors, main-color);
+}
+.btn-pay{
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color:  map-get($theme-colors, main-color);
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.text-pay{
+    font-size: 24px;
+    margin-right: 50px;
+}
+.pay-vnd{
+    margin-right: 80px;
+    text-decoration: underline;
+    color:  map-get($theme-colors, main-color);
+    vertical-align: super;
+}
+/* css ko sản phẩm */
+.component-no-cart{
+    border: 2px solid  map-get($theme-colors, main-color);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin: 10px auto;
+}

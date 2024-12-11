@@ -1,0 +1,99 @@
+@import "src/style/style.scss";
+/* css sản phẩm mới nhập về */
+.new-product{
+    width:90%;
+    margin: 20px auto;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    .component-mini-select-new-product{
+        /* margin-left: 100px; */
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid wheat;
+
+        .title-mini-select-new-product{
+            width: 20%;
+            height: 40px;
+            background-color: map-get($theme-colors, main-color);
+            color: white;
+            font-weight: bold;
+            /* align-items: center; */
+            text-align: center;
+            line-height: 40px;
+            margin-right: 160px;
+        }
+
+        .mini-right-new-product{
+            width: 67%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid red; */
+            justify-content: space-between;
+
+            .mini-menu-new-product{
+                width: 90%;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    margin-right: 20px;
+
+                    &:hover{
+                        color: map-get($theme-colors, main-color);
+                    }
+                }
+            }
+
+            .repair-poisition-new-product{
+                width: 30px;
+                display: flex;
+                justify-content: space-between;
+                margin-right: 5px;
+
+                .dis-new-product{
+                    border: none;
+                    background-color: white;
+                    &:hover{
+                        color: map-get($theme-colors, main-color);
+                    }
+                }
+
+                .add-new-product{
+                    border: none;
+                    background-color: white;
+                    &:hover{
+                        color: map-get($theme-colors, main-color);
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .area-show-option-new-product{
+        display: flex;
+        justify-content: space-between;
+        transition: transform 0.3s ease-in-out;
+        /* overflow-x: auto; */
+        scroll-behavior: smooth; /* Cho hiệu ứng cuộn mượt */
+    }
+
+}
+
+
+
+
+/* component show product mini file khác */
+.component-mini-advertiver-new-product{
+    margin-top: 10px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    border: 2px solid map-get($theme-colors, main-color);
+    transition: transform 0.5s ease-in-out; /* Thời gian di chuyển và kiểu chuyển động */
+}

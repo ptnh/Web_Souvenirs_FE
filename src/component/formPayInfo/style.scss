@@ -1,0 +1,27 @@
+.section_info_contact_user{
+    width: 35%;
+    margin: 30px 20px 0px 70px;
+    .text_contact{
+        color: black;
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+    .form_info_user{
+        width: 400px;
+        margin: 5px 0px;
+        
+    
+        label{
+            font-size: 18px;
+           
+        }
+        .input_info_user {
+            width: 350px;
+            height: 40px;
+            margin: 5px 40px 5px 0px;
+            text-indent: 20px;
+        }
+    }
+}
+

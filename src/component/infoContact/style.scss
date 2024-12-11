@@ -1,0 +1,63 @@
+@import "src/style/style.scss";
+
+.section_info_contact{
+    width: 1140px;
+    height: 540px;
+    display: flex;
+    margin: 15px auto;
+    .contact_online{
+        margin-right: 30px;
+
+        .area_info_contact{
+            display: flex;
+            margin: 10px;
+    
+            .icon_info_contact{
+                color: map-get($theme-colors, main-color);
+                margin-right: 20px;
+            }
+        }
+        .send_email_contact{
+            margin-top: 40px;
+
+            .title_contact{
+                font-size: 22px;
+            }
+    
+            .purport{
+                width: 360px;
+                height: 45px;
+                margin-bottom: 15px;
+            }
+            .purport:focus{
+                outline: none;
+            }
+
+            .purport_response{
+                width: 360px;
+                height: 90px;
+            }
+            .purport_response:focus{
+                outline: none;
+            }
+
+            .btn-send-email{
+                width: 115px;
+                height: 50px;
+                color: white;
+                background-color: map-get($theme-colors, main-color);
+                border: none;
+                border-radius: 5px;
+            }
+            .btn-send-email:hover{
+                background-color: rgb(214, 149, 28);
+            }
+        }
+    }
+    .contact_address{
+        .map_shop{
+            width: 750px;
+            height: 450px;
+        }
+    }
+}
